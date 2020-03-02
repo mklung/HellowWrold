@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Diamond : MonoBehaviour
 {   
     public char Input;
-    public Text m_outPut_Text;
-
+    public Text m_outPut_Text2;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class Diamond : MonoBehaviour
 
     public void DiamondFunc()
     {
-        m_outPut_Text.text = "";
+        m_outPut_Text2.text = "";
         int Diamond_Length = (int)Input - 64;
         int Char_pos = Diamond_Length - 1;
         char[] Char_Array = new char[Diamond_Length * 2 -1];
@@ -43,9 +43,9 @@ public class Diamond : MonoBehaviour
 
             for (int k = 0; k < Char_Array.Length; k++)
             {
-                m_outPut_Text.text += Char_Array[k];
+                m_outPut_Text2.text += Char_Array[k];
             }
-            m_outPut_Text.text += "\n";
+            m_outPut_Text2.text += "\n";
 
 
             if( i >= Diamond_Length -1)
